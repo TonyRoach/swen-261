@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% block body %}
+<div col-md-8 col-md-offset-2>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Appointments</div>
+        <div class="panel-body">
+            <p>{{ request.user }}</p>
+            {% if appointment_list %}
+                <ul>
+                {%  for appointment in appointment_list %}
+                    <li><a href="/appointments/{{ appointment.id }}/">{{ appointment.time }}</a></li>
+                {%  endfor %}
+                </ul>
+            {% else %}
+                <p>No appointments made.</p>
+            {% endif %}
+            {% buttons %}
+                <a href="create/" class="btn btn-primary">Create Appointment</a>
+            {% endbuttons %}
+        </div>
+    </div>
+</div>
+{% endblock %} 

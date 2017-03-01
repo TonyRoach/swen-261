@@ -1,0 +1,4 @@
+All people can see all appointments (appointment attribution bug)
+
+Error when visting the profile as a doctor
+Doctor's specialty not showing up in their profile
